@@ -67,7 +67,7 @@ const TypingDemo = () => {
    return (
       <div className="space-y-4">
          <div className="bg-gray-900 p-4 rounded-lg min-h-[100px] flex items-center">
-            <div className="font-fira text-lg leading-relaxed">
+            <div className="font-fira text-lg leading-relaxed select-none pointer-events-none" onCopy={(e) => e.preventDefault()}>
                {renderText(sampleText, input)}
                {!isComplete && input.length < sampleText.length && <BlinkingCursor />}
             </div>

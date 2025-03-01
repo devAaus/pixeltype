@@ -9,7 +9,7 @@ export default function CTASection() {
          <p className="font-mono text-xl">Test your typing speed and accuracy now!</p>
          <Button className="font-pixel text-xl px-10 py-8 bg-green-600 hover:bg-green-500 text-black" asChild>
             <Link href="/tests">
-               START YOUR TYPING TEST
+               START YOUR TEST
             </Link>
          </Button>
       </section>

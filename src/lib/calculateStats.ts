@@ -8,11 +8,11 @@ export const calculateWpm = (
    return Math.round(input.trim().split(/\s+/).length / timeInMinutes)
 }
 
-export const calculateAccuracy = (
-   input: string,
-   sampleText: string
-): number | null => {
+export const calculateAccuracy = (input: string, sampleText: string): number | null => {
    if (!input.length) return null
+
    const correctChars = input.split("").filter((char, i) => char === sampleText[i]).length
-   return Math.round((correctChars / sampleText.length) * 100)
+
+   return Math.round((correctChars / input.length) * 100)
 }
+
