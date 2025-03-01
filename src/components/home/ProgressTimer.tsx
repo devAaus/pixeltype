@@ -14,11 +14,20 @@ export default function ProgressTimer(
    return (
       <div className="mt-4 space-y-2">
          <div className="flex justify-between text-xl font-mono">
-            <span>Time Left</span>
-            <div className="flex justify-between items-center text-lg font-mono rounded-lg">
+            <span className='flex justify-between items-center gap-2'>
                <Timer className="h-5 w-5 text-green-400" />
-               <span className={`text-2xl font-mono ${timeLeft <= 5 ? 'text-red-500 animate-pulse font-bold' : ''}`}>
-                  : {timeLeft}s
+               Time Left
+            </span>
+            <div className=" text-lg font-mono rounded-lg">
+               <span
+                  className={`text-2xl font-mono 
+                     ${timeLeft <= 5
+                        ? 'text-red-500 animate-pulse font-bold'
+                        : ''
+                     }`
+                  }
+               >
+                  {timeLeft}s
                </span>
             </div>
          </div>
