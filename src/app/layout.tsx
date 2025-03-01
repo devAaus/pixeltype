@@ -1,8 +1,10 @@
 import { Press_Start_2P, VT323, Fira_Mono } from "next/font/google"
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import Header from "@/components/Header";
 import PixelatedBackground from "@/components/PixelatedBackground";
 import FloatingPixels from "@/components/FloatingPixels";
+
 
 const pressStart2P = Press_Start_2P({
   weight: "400",
@@ -46,6 +48,7 @@ export default function RootLayout({
           <footer className="py-8 text-center font-mono">© 2024 PIXEL TYPE. All keys reserved.</footer>
         </div>
         <FloatingPixels />
+        <Analytics />
       </body>
     </html>
   );
