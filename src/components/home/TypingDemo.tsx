@@ -7,6 +7,8 @@ import BlinkingCursor from "../BlinkingCursor"
 import { generateWords } from "@/lib/utils"
 import { renderText } from "@/lib/renderText"
 import { calculateAccuracy, calculateWpm } from "@/lib/calculateStats"
+import ProgressTimer from "./ProgressTimer"
+import Results from "./Results"
 
 const TIME_LIMIT = 30
 
@@ -65,7 +67,7 @@ const TypingDemo = () => {
    const accuracy = useMemo(() => calculateAccuracy(input, sampleText), [input, sampleText])
 
    return (
-      <div className="space-y-4">
+      <div className="space-y-5">
          <div className="bg-gray-900 p-4 rounded-lg min-h-[100px] flex items-center">
             <div className="font-fira text-lg leading-relaxed select-none pointer-events-none" onCopy={(e) => e.preventDefault()}>
                {renderText(sampleText, input)}
@@ -73,7 +75,9 @@ const TypingDemo = () => {
             </div>
          </div>
 
-         <div className="flex flex-col space-y-4">
+         <ProgressTimer TIME_LIMIT={TIME_LIMIT} timeLeft={timeLeft} />
+
+         <div className="flex flex-col space-y-4 mt-2">
             <textarea
                ref={inputRef}
                value={input}
@@ -89,22 +93,9 @@ const TypingDemo = () => {
                   RESET
                </Button>
 
-               <div className="flex space-x-4 font-mono text-lg">
-                  <div className="flex justify-between text-lg font-mono bg-gray-900 p-3 rounded-lg">
-                     <span>Time Left: {timeLeft}s</span>
-                  </div>
-
-                  {isComplete && (
-                     <>
-                        <div className="flex justify-between text-lg font-mono bg-gray-900 p-3 rounded-lg">
-                           <span className="text-green-400">WPM: {wpm ?? 0}</span>
-                        </div>
-                        <div className="flex justify-between text-lg font-mono bg-gray-900 p-3 rounded-lg">
-                           <span className="text-green-400">Accuracy: {accuracy ?? 0}%</span>
-                        </div>
-                     </>
-                  )}
-               </div>
+               {isComplete && (
+                  <Results accuracy={accuracy} wpm={wpm} />
+               )}
             </div>
          </div>
       </div>
