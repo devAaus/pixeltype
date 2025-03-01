@@ -7,6 +7,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function generateWords(word: number) {
-  return faker.word.words(word)
+  return Array.from({ length: word }, () => faker.word.sample())
+    .join(" ")
+    .toLowerCase()
 }
+
 

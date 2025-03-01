@@ -5,6 +5,7 @@
 @theme {
   --font-sans: var(--font-press-start-2p);
   --font-mono: var(--font-vt323);
+  --font-fira: var(--font-fira-mono);
 }
 
 :root {

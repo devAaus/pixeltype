@@ -1,13 +1,11 @@
-import React from "react"
-
 export const renderText = (sampleText: string, input: string) => {
    return sampleText.split("").map((char, index) => {
-      let className = "font-mono text-2xl"
+      let className = "font-fira text-xl tracking-wider leading-relaxed break-all"
 
       if (index < input.length) {
          className += input[index] === char ? " text-green-400" : " text-red-500"
       } else {
-         className += " text-gray-300"
+         className += " text-slate-400"
       }
 
       return (

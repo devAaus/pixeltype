@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { Press_Start_2P, VT323 } from "next/font/google"
+import { Press_Start_2P, VT323, Fira_Mono } from "next/font/google"
 import "./globals.css";
 import Header from "@/components/Header";
 import PixelatedBackground from "@/components/PixelatedBackground";
@@ -15,6 +14,12 @@ const vt323 = VT323({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-vt323",
+})
+
+const firamono = Fira_Mono({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-fira-mono",
 })
 
 export const metadata = {
@@ -35,7 +40,7 @@ export default function RootLayout({
         <PixelatedBackground />
         <div className="max-w-4xl mx-auto px-4">
           <Header />
-          <main className="pb-16">
+          <main className="pb-16 min-h-screen">
             {children}
           </main>
           <footer className="py-8 text-center font-mono">© 2024 PIXEL TYPE. All keys reserved.</footer>

@@ -14,11 +14,11 @@ export default function HeroSection() {
             Challenge yourself with our retro-styled typing test. How fast can you type?
          </p>
          <div className="flex justify-center gap-4 pt-4">
-            <Link href="/tests">
-               <Button className="font-pixel text-lg px-8 py-6 bg-green-600 hover:bg-green-500 text-black">
+            <Button className="font-pixel text-lg px-8 py-6 bg-green-600 hover:bg-green-500 text-black" asChild>
+               <Link href="/tests">
                   START TYPING
-               </Button>
-            </Link>
+               </Link>
+            </Button>
          </div>
       </section>
    )
