@@ -40,8 +40,8 @@ pnpm dev
 
 ![Pixel Type Screenshot](public/screenshot.png)
 
-🌟 Contributing
+## 🌟 Contributing
 Feel free to fork this project, submit issues, or contribute improvements!
 
-📄 License
+## 📄 License
 This project is open-source and available under the MIT License.
