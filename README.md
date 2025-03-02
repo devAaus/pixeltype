@@ -27,13 +27,13 @@ cd pixeltype
 2️⃣ Install Dependencies
 
 ```bash
-pnpm install
+bun install
 ```
 
 3️⃣ Start the Development Server
 
 ```bash
-pnpm dev
+bun dev
 ```
 
 ## 📸 Preview
