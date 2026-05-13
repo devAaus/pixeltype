@@ -38,18 +38,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            echo 'Pipeline completed.'
-        }
-
-        success {
-            echo 'Application deployed successfully.'
-        }
-
-        failure {
-            echo 'Pipeline failed.'
-        }
-    }
 }
