@@ -1,6 +1,6 @@
 # 🚀 Pixel Type
 
-**Pixel Type** is a **typing speed test web app** built with **React, TypeScript, and Tailwind CSS**. It helps users test their **typing speed and accuracy** with real-time **WPM (Words Per Minute)** and **accuracy tracking**.
+**PixelType** is a **typing speed test web app** built with **React, TypeScript, and Tailwind CSS**. It helps users test their **typing speed and accuracy** with real-time **WPM (Words Per Minute)** and **accuracy tracking**.
 
 ## 🔥 Features
 
